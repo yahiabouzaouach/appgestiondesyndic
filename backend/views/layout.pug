@@ -1,0 +1,27 @@
+doctype html 
+html    
+    head 
+        title node
+    body 
+        div
+            nav     
+                span(id="closeMenu") &times;
+                ul 
+                    li 
+                        a(href="/") home
+
+                    if (token=="")
+                        li 
+                            a(href="/auth/register") register
+                        li  
+                            a(href="/auth/login") login
+                    else 
+                        li 
+                            a(href="/createfrais") create new
+                        li
+                            a(href="/auth/user/dashboard") my dashboard 
+                        li 
+                            a(href="/auth/logout") logout
+    div.container 
+        block content 
+    script(src="/js/functions.js")

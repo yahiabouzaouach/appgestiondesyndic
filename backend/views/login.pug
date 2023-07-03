@@ -1,0 +1,14 @@
+extends layout 
+block content 
+    setion 
+        h1 welcome back 
+       
+        form(action="/auth/login" enctype="multipart/form-data" method="POST")
+            label (for="email")email
+            input(type="mail" name="mail" required)
+
+            label (for="password")password
+            input(type="password" name="password" required)
+
+            input(type="submit" value="submit")
+             

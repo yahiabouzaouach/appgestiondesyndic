@@ -1,0 +1,41 @@
+extends layout 
+block content 
+    setion 
+        h1 Register 
+        if (err)
+            p.error=err 
+        if(sucess)
+            p.success=sucess 
+
+        form(action="/auth/register" enctype="multipart/form-data" method="POST")
+            label (for="CIN")CIN
+            input(type="integer" name="CIN" required)
+
+            label (for="nom")nom
+            input(type="test" name="nom" required)
+
+            label (for="prenom")prenom
+            input(type="text" name="prenom" required)
+             
+            label (for="mail")mail
+            input(type="email" name="mail" required)
+
+            label (for="password")password
+            input(type="password" name="password" required)
+
+            label (for="numbloc")num bloc
+            input(type="integer" name="numbloc" required)
+
+            label (for="numhabitat")num habitat
+            input(type="integer" name="numhabitat" required)
+
+            label (for="numTel")numTel
+            input(type="integer" name="numTel" required)
+             
+            input(type="submit" value="submit")
+
+            
+            
+
+
+
